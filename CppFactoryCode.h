@@ -1,9 +1,9 @@
 #ifndef CPPFACTORYCODE_H
 #define CPPFACTORYCODE_H
 
-#include "ClassUnit.h"
-#include "MethodUnit.h"
-#include "PrintOperatorUnit.h"
+#include "CppClassUnit.h"
+#include "CppMethodUnit.h"
+#include "CppPrintOperatorUnit.h"
 
 #include "Unit.h"
 #include <iostream>
@@ -22,13 +22,13 @@ class CppFactoryCode : public FactoryCode{
 
 
         std::shared_ptr<ClassUnit> createClassUnit(std::string name,ClassUnit::Flags flag) {
-            return std::make_shared<ClassUnit>(name);
+            return std::make_shared<CppClassUnit>(name);
         }
         std::shared_ptr<MethodUnit> createMethodUnit(std::string name, std::string returnType, MethodUnit::Flags flags) {
-            return std::make_shared<MethodUnit>(name, returnType, flags);
+            return std::make_shared<CppMethodUnit>(name, returnType, flags);
         }
         std::shared_ptr<PrintOperatorUnit> createPrintOperatorUnit(std::string text) {
-            return std::make_shared<PrintOperatorUnit>(text);
+            return std::make_shared<CppPrintOperatorUnit>(text);
         }
 };
 
