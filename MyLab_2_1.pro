@@ -10,12 +10,14 @@ CONFIG += c++11
 
 SOURCES += \
     ClassUnit.cpp \
+    MethodUnit.cpp \
     Unit.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     ClassUnit.h \
+    MethodUnit.h \
     Unit.h \
     mainwindow.h
 
