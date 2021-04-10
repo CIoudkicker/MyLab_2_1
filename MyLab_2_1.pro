@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     ClassUnit.cpp \
+    CppClassUnit.cpp \
     CppFactoryCode.cpp \
     FactoryCode.cpp \
     GenerateProgram.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
 
 HEADERS += \
     ClassUnit.h \
+    CppClassUnit.h \
     CppFactoryCode.h \
     FactoryCode.h \
     GenerateProgram.h \
