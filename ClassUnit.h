@@ -23,12 +23,13 @@ class ClassUnit : public Unit{
             m_fields.resize( ACCESS_MODIFIERS.size() );
         }
 
+        ClassUnit(){};
+
         virtual ~ClassUnit(){};
-        void add( const std::shared_ptr< Unit >& unit, Flags flags );
+        virtual void add( const std::shared_ptr< Unit >& unit, Flags flags ) = 0;
+        virtual std::string compile(unsigned int level) const = 0;
 
-        std::string compile(unsigned int level) const;
-
-    private:
+    protected:
 
         std::string m_name;
         using Fields = std::vector< std::shared_ptr< Unit > >;

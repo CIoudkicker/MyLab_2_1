@@ -10,7 +10,10 @@ CONFIG += c++11
 
 SOURCES += \
     ClassUnit.cpp \
+    CppClassUnit.cpp \
     CppFactoryCode.cpp \
+    CppMethodUnit.cpp \
+    CppPrintOperatorUnit.cpp \
     FactoryCode.cpp \
     GenerateProgram.cpp \
     MethodUnit.cpp \
@@ -21,7 +24,10 @@ SOURCES += \
 
 HEADERS += \
     ClassUnit.h \
+    CppClassUnit.h \
     CppFactoryCode.h \
+    CppMethodUnit.h \
+    CppPrintOperatorUnit.h \
     FactoryCode.h \
     GenerateProgram.h \
     MethodUnit.h \

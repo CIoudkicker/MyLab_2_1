@@ -6,24 +6,27 @@
 #include <vector>
 
 class MethodUnit : public Unit{
-public:
-    enum Modifier {
-        STATIC = 1,
-        CONST = 1 << 1,
-        VIRTUAL = 1 << 2
-    };
+    public:
 
-    MethodUnit( const std::string& name, const std::string& returnType, Flags flags ) :
-        m_name( name ), m_returnType( returnType ), m_flags( flags ) { }
+        enum Modifier {
+            STATIC = 1,
+            CONST = 1 << 1,
+            VIRTUAL = 1 << 2
+        };
 
-    void add( const std::shared_ptr< Unit >& unit, Flags flags);
+        MethodUnit( const std::string& name, const std::string& returnType, Flags flags ) :
+            m_name( name ), m_returnType( returnType ), m_flags( flags ) { }
 
-    std::string compile( unsigned int level ) const;
-private:
-    std::string m_name;
-    std::string m_returnType;
-    Flags m_flags;
-    std::vector< std::shared_ptr< Unit > > m_body;
+        virtual void add( const std::shared_ptr< Unit >& unit, Flags flags) = 0;
+
+        virtual std::string compile( unsigned int level ) const = 0;
+
+    protected:
+
+        std::string m_name;
+        std::string m_returnType;
+        Flags m_flags;
+        std::vector< std::shared_ptr< Unit > > m_body;
 
 };
 

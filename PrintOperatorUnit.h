@@ -12,9 +12,9 @@ class PrintOperatorUnit : public Unit {
 
         explicit PrintOperatorUnit( const std::string& text ) : m_text( text ) { }
 
-        std::string compile(unsigned int level) const;
+        virtual std::string compile(unsigned int level) const = 0;
 
-    private:
+    protected:
 
         std::string m_text;
 };
