@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     ClassUnit.cpp \
     MethodUnit.cpp \
+    PrintOperatorUnit.cpp \
     Unit.cpp \
     main.cpp \
     mainwindow.cpp
@@ -18,6 +19,7 @@ SOURCES += \
 HEADERS += \
     ClassUnit.h \
     MethodUnit.h \
+    PrintOperatorUnit.h \
     Unit.h \
     mainwindow.h
 
