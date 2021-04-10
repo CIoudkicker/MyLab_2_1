@@ -12,6 +12,7 @@ SOURCES += \
     ClassUnit.cpp \
     CppClassUnit.cpp \
     CppFactoryCode.cpp \
+    CppMethodUnit.cpp \
     FactoryCode.cpp \
     GenerateProgram.cpp \
     MethodUnit.cpp \
@@ -24,6 +25,7 @@ HEADERS += \
     ClassUnit.h \
     CppClassUnit.h \
     CppFactoryCode.h \
+    CppMethodUnit.h \
     FactoryCode.h \
     GenerateProgram.h \
     MethodUnit.h \
