@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     ClassUnit.cpp \
     CppFactoryCode.cpp \
+    GenerateProgram.cpp \
     MethodUnit.cpp \
     PrintOperatorUnit.cpp \
     Unit.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
 HEADERS += \
     ClassUnit.h \
     CppFactoryCode.h \
+    GenerateProgram.h \
     MethodUnit.h \
     PrintOperatorUnit.h \
     Unit.h \
