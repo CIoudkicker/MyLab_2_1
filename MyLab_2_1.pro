@@ -21,6 +21,10 @@ SOURCES += \
     ExceptionsUnit.cpp \
     FactoryCode.cpp \
     GenerateProgram.cpp \
+    JavaClassUnit.cpp \
+    JavaFactoryCode.cpp \
+    JavaMethodUnit.cpp \
+    JavaPrintOperatorUnit.cpp \
     MethodUnit.cpp \
     PrintOperatorUnit.cpp \
     Unit.cpp \
@@ -40,6 +44,10 @@ HEADERS += \
     ExceptionsUnit.h \
     FactoryCode.h \
     GenerateProgram.h \
+    JavaClassUnit.h \
+    JavaFactoryCode.h \
+    JavaMethodUnit.h \
+    JavaPrintOperatorUnit.h \
     MethodUnit.h \
     PrintOperatorUnit.h \
     Unit.h \
