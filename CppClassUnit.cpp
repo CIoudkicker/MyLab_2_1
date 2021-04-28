@@ -1,4 +1,5 @@
 #include "CppClassUnit.h"
+#include "ExceptionsUnit.h"
 
 const std::vector< std::string > CppClassUnit::ACCESS_MODIFIERS = {
     "public",
@@ -7,12 +8,16 @@ const std::vector< std::string > CppClassUnit::ACCESS_MODIFIERS = {
 };
 
 void CppClassUnit::add( const std::shared_ptr< Unit >& unit, Flags flags ) {
-
     int accessModifier = PRIVATE;
 
-    if( flags < ACCESS_MODIFIERS.size() ) {
+    if(ACCESS_MODIFIERS.size()-1 < flags){
+        AddException *addException = new AddException("Exception wrong access modifiers ");
+        throw addException;
+    }else
+    if( flags != accessModifier ) {
         accessModifier = flags;
     }
+
     m_fields[ accessModifier ].push_back( unit );
 }
 

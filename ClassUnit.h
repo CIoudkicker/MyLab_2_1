@@ -26,6 +26,10 @@ class ClassUnit : public Unit{
             m_fields.resize( ACCESS_MODIFIERS.size() );
         }
 
+        ClassUnit( const std::string& name, Flags flag) : m_name(name), m_flags(flag) {
+            m_fields.resize( ACCESS_MODIFIERS.size() );
+        }
+
         ClassUnit(){};
 
         virtual ~ClassUnit(){};
@@ -35,6 +39,7 @@ class ClassUnit : public Unit{
     protected:
 
         std::string m_name;
+        Flags m_flags;
         using Fields = std::vector< std::shared_ptr< Unit > >;
         std::vector< Fields > m_fields;
 };
