@@ -23,7 +23,7 @@ std::string GenerateProgram::generateProgram() {
         myClass->add(methodUnit1, ClassUnit::PUBLIC);
         myClass->add(methodUnit2, ClassUnit::PRIVATE);
         myClass->add(methodUnit3, ClassUnit::PUBLIC);
-        myClass->add(methodUnit4, ClassUnit::PROTECTED_INTERNAL);
+        myClass->add(methodUnit4, ClassUnit::PRIVATE);
     }catch (ExceptionsUnit *e){
         cout << e->what() << endl;
     }

@@ -14,13 +14,14 @@
 #include "FactoryCode.h"
 #include "CppFactoryCode.h"
 #include "CSharpFactoryCode.h"
+#include "JavaFactoryCode.h"
 #include "GenerateProgram.h"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-    FactoryCode *fc = new CSharpFactoryCode();
+    FactoryCode *fc = new JavaFactoryCode();
     GenerateProgram *gp = new GenerateProgram(fc);
 
     std::cout << gp->generateProgram() << std::endl;
