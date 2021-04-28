@@ -3,9 +3,9 @@
 const std::vector< std::string > ClassUnit::ACCESS_MODIFIERS = {
     "public",
     "protected",
-    "internal",
-    "protected_internal",
-    "private_protected",
-    "private"
+    "private",
+    "protected internal",
+    "private protected",
+    "internal"
 };
 

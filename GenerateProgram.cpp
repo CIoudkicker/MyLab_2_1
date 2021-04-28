@@ -1,5 +1,5 @@
 #include "GenerateProgram.h"
-#include "ExceptionsUnit.h"
+
 
 GenerateProgram::GenerateProgram(FactoryCode* factory){
     codeCreator = factory;
@@ -8,7 +8,7 @@ GenerateProgram::GenerateProgram(FactoryCode* factory){
 std::string GenerateProgram::generateProgram() {
 
     //ClassUnit myClass( "MyClass" );
-    std::shared_ptr<ClassUnit> myClass = codeCreator->createClassUnit("MyClass", ClassUnit::PUBLIC );
+    std::shared_ptr<ClassUnit> myClass = codeCreator->createClassUnit("MyCSharpClass", ClassUnit::AccessModifier::PRIVATE_PROTECTED );
 
     std::shared_ptr<MethodUnit> methodUnit1 = codeCreator->createMethodUnit("testFunc1", "void", 0);
     std::shared_ptr<MethodUnit> methodUnit2 = codeCreator->createMethodUnit("testFunc2", "void", MethodUnit::STATIC);

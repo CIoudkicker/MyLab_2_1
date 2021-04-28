@@ -7,6 +7,7 @@
 #include <vector>
 
 
+
 class ClassUnit : public Unit{
 
     public:
@@ -20,7 +21,6 @@ class ClassUnit : public Unit{
             INTERNAL
         };
 
-        static const std::vector< std::string > ACCESS_MODIFIERS;
 
         ClassUnit( const std::string& name ) : m_name( name ) {
             m_fields.resize( ACCESS_MODIFIERS.size() );
@@ -37,7 +37,7 @@ class ClassUnit : public Unit{
         virtual std::string compile(unsigned int level) const = 0;
 
     protected:
-
+        static const std::vector< std::string > ACCESS_MODIFIERS;
         std::string m_name;
         Flags m_flags;
         using Fields = std::vector< std::shared_ptr< Unit > >;
