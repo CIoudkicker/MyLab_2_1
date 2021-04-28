@@ -22,11 +22,20 @@ class ClassUnit : public Unit{
         };
 
 
-        ClassUnit( const std::string& name ) : m_name( name ) {
+        enum RealizationModifier{
+            FINAL = 1,
+            ABSTRACT
+        };
+
+        ClassUnit( const std::string& name) : m_name(name){
             m_fields.resize( ACCESS_MODIFIERS.size() );
         }
 
         ClassUnit( const std::string& name, Flags flag) : m_name(name), m_flags(flag) {
+            m_fields.resize( ACCESS_MODIFIERS.size() );
+        }
+
+        ClassUnit( const std::string& name, Flags flag, Final final) : m_name(name), m_flags(flag), m_final(final) {
             m_fields.resize( ACCESS_MODIFIERS.size() );
         }
 
@@ -38,8 +47,10 @@ class ClassUnit : public Unit{
 
     protected:
         static const std::vector< std::string > ACCESS_MODIFIERS;
+        static const std::vector< std::string > REALIZATION_MODIFIERS;
         std::string m_name;
         Flags m_flags;
+        Final m_final;
         using Fields = std::vector< std::shared_ptr< Unit > >;
         std::vector< Fields > m_fields;
 };

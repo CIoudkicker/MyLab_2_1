@@ -10,10 +10,12 @@
 #include <vector>
 
 class FactoryCode{
+
     public:
+
         virtual ~FactoryCode() {}
-        virtual std::shared_ptr<ClassUnit> createClassUnit(std::string name, ClassUnit::Flags flag) = 0;
-        virtual std::shared_ptr<MethodUnit> createMethodUnit(std::string name, std::string returnType, MethodUnit::Flags flags) = 0;
+        virtual std::shared_ptr<ClassUnit> createClassUnit(std::string name, ClassUnit::Flags flag, ClassUnit::Final final) = 0;
+        virtual std::shared_ptr<MethodUnit> createMethodUnit(std::string name, std::string returnType, MethodUnit::Flags flags, MethodUnit::Final final) = 0;
         virtual std::shared_ptr<PrintOperatorUnit> createPrintOperatorUnit(std::string text) = 0;
 };
 

@@ -9,3 +9,8 @@ const std::vector< std::string > ClassUnit::ACCESS_MODIFIERS = {
     "internal"
 };
 
+const std::vector< std::string > ClassUnit::REALIZATION_MODIFIERS = {
+    "",
+    "final",
+    "abstract"
+};

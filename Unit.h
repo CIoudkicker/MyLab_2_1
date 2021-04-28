@@ -11,6 +11,8 @@ class Unit{
 
         using Flags = unsigned int;
 
+        using Final = unsigned int;
+
         virtual ~Unit() = default;
 
         virtual void add(const std::shared_ptr<Unit>&, Flags);

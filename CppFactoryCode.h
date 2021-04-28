@@ -21,7 +21,7 @@ class CppFactoryCode : public FactoryCode{
         ~CppFactoryCode() {}
 
 
-        std::shared_ptr<ClassUnit> createClassUnit(std::string name,ClassUnit::Flags flag) {
+        std::shared_ptr<ClassUnit> createClassUnit(std::string name,ClassUnit::Flags flag, ClassUnit::Final final) {
             return std::make_shared<CppClassUnit>(name);
         }
         std::shared_ptr<MethodUnit> createMethodUnit(std::string name, std::string returnType, MethodUnit::Flags flags) {

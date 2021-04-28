@@ -14,8 +14,16 @@ class MethodUnit : public Unit{
             VIRTUAL = 1 << 2
         };
 
+        enum RealizationModifier{
+            FINAL = 1,
+            ABSTRACT
+        };
+
         MethodUnit( const std::string& name, const std::string& returnType, Flags flags ) :
             m_name( name ), m_returnType( returnType ), m_flags( flags ) { }
+
+        MethodUnit( const std::string& name, const std::string& returnType, Flags flags, Final final ) :
+            m_name( name ), m_returnType( returnType ), m_flags( flags ), m_final(final) { }
 
         virtual void add( const std::shared_ptr< Unit >& unit, Flags flags) = 0;
 
@@ -26,6 +34,7 @@ class MethodUnit : public Unit{
         std::string m_name;
         std::string m_returnType;
         Flags m_flags;
+        Final m_final;
         std::vector< std::shared_ptr< Unit > > m_body;
 
 };
