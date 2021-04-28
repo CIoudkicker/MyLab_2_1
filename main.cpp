@@ -25,9 +25,11 @@ int main(int argc, char *argv[])
     std::cout << gp->generateProgram() << std::endl;
     delete fc;
     delete gp;
-
+/*
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
     return a.exec();
+*/
+    return 1;
 }
