@@ -9,6 +9,10 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    CSharpClassUnit.cpp \
+    CSharpFactoryCode.cpp \
+    CSharpMethodUnit.cpp \
+    CSharpPrintOperatorUnit.cpp \
     ClassUnit.cpp \
     CppClassUnit.cpp \
     CppFactoryCode.cpp \
@@ -24,6 +28,10 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    CSharpClassUnit.h \
+    CSharpFactoryCode.h \
+    CSharpMethodUnit.h \
+    CSharpPrintOperatorUnit.h \
     ClassUnit.h \
     CppClassUnit.h \
     CppFactoryCode.h \

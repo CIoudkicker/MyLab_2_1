@@ -1,13 +1,15 @@
-#include "CppClassUnit.h"
+#include "CSharpClassUnit.h"
 
-
-const std::vector< std::string > CppClassUnit::ACCESS_MODIFIERS = {
+const std::vector< std::string > CSharpClassUnit::ACCESS_MODIFIERS = {
     "public",
     "protected",
-    "private"
+    "private",
+    "protected internal",
+    "private protected",
+    "internal"
 };
 
-void CppClassUnit::add( const std::shared_ptr< Unit >& unit, Flags flags ) {
+void CSharpClassUnit::add( const std::shared_ptr< Unit >& unit, Flags flags ) {
     int accessModifier = PRIVATE;
 
     if(ACCESS_MODIFIERS.size()-1 < flags){
@@ -21,9 +23,9 @@ void CppClassUnit::add( const std::shared_ptr< Unit >& unit, Flags flags ) {
     m_fields[ accessModifier ].push_back( unit );
 }
 
-std::string CppClassUnit::compile( unsigned int level = 0 ) const{
+std::string CSharpClassUnit::compile( unsigned int level = 0 ) const{
 
-    std::string result = generateShift( level ) + "class " + m_name + " {\n";
+    std::string result = generateShift( level ) + ACCESS_MODIFIERS[m_flags] + " class " + m_name + " {\n";
 
     for( size_t i = 0; i < ACCESS_MODIFIERS.size(); ++i ) {
          if( m_fields[ i ].empty() ) {
