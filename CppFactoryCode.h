@@ -21,13 +21,13 @@ class CppFactoryCode : public FactoryCode{
         ~CppFactoryCode() {}
 
 
-        std::shared_ptr<ClassUnit> createClassUnit(std::string name,ClassUnit::Flags flag, ClassUnit::Final final) {
+        std::shared_ptr<ClassUnit> createClassUnit(std::string name,ClassUnit::Flags flag, ClassUnit::Final final)override {
             return std::make_shared<CppClassUnit>(name);
         }
-        std::shared_ptr<MethodUnit> createMethodUnit(std::string name, std::string returnType, MethodUnit::Flags flags) {
+        std::shared_ptr<MethodUnit> createMethodUnit(std::string name, std::string returnType, MethodUnit::Flags flags, MethodUnit::Final final)override {
             return std::make_shared<CppMethodUnit>(name, returnType, flags);
         }
-        std::shared_ptr<PrintOperatorUnit> createPrintOperatorUnit(std::string text) {
+        std::shared_ptr<PrintOperatorUnit> createPrintOperatorUnit(std::string text)override {
             return std::make_shared<CppPrintOperatorUnit>(text);
         }
 };

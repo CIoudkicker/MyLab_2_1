@@ -26,7 +26,7 @@ class ClassUnit : public Unit{
             FINAL = 1,
             ABSTRACT
         };
-
+/*
         ClassUnit( const std::string& name) : m_name(name){
             m_fields.resize( ACCESS_MODIFIERS.size() );
         }
@@ -34,8 +34,8 @@ class ClassUnit : public Unit{
         ClassUnit( const std::string& name, Flags flag) : m_name(name), m_flags(flag) {
             m_fields.resize( ACCESS_MODIFIERS.size() );
         }
-
-        ClassUnit( const std::string& name, Flags flag, Final final) : m_name(name), m_flags(flag), m_final(final) {
+*/
+        ClassUnit( const std::string& name, Flags flag = 0, Final final = 0) : m_name(name), m_flags(flag), m_final(final) {
             m_fields.resize( ACCESS_MODIFIERS.size() );
         }
 

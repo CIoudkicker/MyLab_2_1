@@ -19,10 +19,28 @@
 
 using namespace std;
 
+void PrintAll(FactoryCode *fc){
+
+    GenerateProgram *gp = new GenerateProgram(fc);
+
+
+    std::cout << gp->generateProgram() << std::endl;
+    delete fc;
+    delete gp;
+}
+
 int main(int argc, char *argv[])
 {
     FactoryCode *fc = new JavaFactoryCode();
+
+    PrintAll(new CppFactoryCode());
+    PrintAll(new JavaFactoryCode());
+    PrintAll(new CSharpFactoryCode());
+
+
     GenerateProgram *gp = new GenerateProgram(fc);
+
+
 
     std::cout << gp->generateProgram() << std::endl;
     delete fc;
